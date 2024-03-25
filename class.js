@@ -51,11 +51,6 @@ class Disco4 extends Obj{
         
     }
 }
-class Disco5 extends Obj{
-    des_obj(){
-        
-    }
-}
 
 class Tiro extends Obj{
     des_tiro(){
