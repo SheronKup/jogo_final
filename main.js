@@ -12,7 +12,7 @@ function atualiza(){
 }
 
 function main(){
-    des.clearRect(0,0,500,700)
+    des.clearRect(0,0,508,607)
     desenha()
     atualiza()
     requestAnimationFrame(main)
