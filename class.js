@@ -68,9 +68,17 @@ class BG extends Obj{
     }
 }
 
-class Texto{
+class Texto1{
     des_text(){
         
     }
 }
+class Texto2{
+    des_text(){
+        
+    }
+
+getTextWidth(texto){
+
+}}
    
