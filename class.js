@@ -7,6 +7,10 @@ class Obj {
         this.at = at
     }
 
+point(){
+
+    }
+
 des_obj(){
 
 }
