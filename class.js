@@ -5,11 +5,14 @@ class Obj {
         this.w = w
         this.h = h
         this.at = at
+        this.points = 0
     }
 
 
 des_obj(){
-
+    let img = new Image()
+    img.src = this.at
+    des.drawImage(img,this.x,this.y,this.w,this.h)
 }
 
 colid(objeto){
