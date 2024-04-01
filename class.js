@@ -61,11 +61,12 @@ class Disco4 extends Obj{
 
 class Tiro extends Obj{
     des_tiro(){
-
+        des.fillStyle = this.at
+        des.fillRect(this.x, this.y, this.w, this.h)
     }
 
     mov(){
-
+        this.y -= 10
     }
 }
 
