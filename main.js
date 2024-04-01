@@ -1,5 +1,12 @@
 function colisao(){
-    
+    grupoDiscos.forEach((disc)=>{
+        if(nav1.colid(disc)){
+            grupoDiscos.splice(grupoDiscos.indexOf(disc), 1)
+            nav1.vida -=1
+            enemyDefeatedCount += 1
+            kill.play()
+        }
+    })
 }
 
 function desenha(){    
