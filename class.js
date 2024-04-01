@@ -22,21 +22,26 @@ colid(objeto){
 }
 
 class Nave extends Obj{
+    dir = 0
+    pts = 0
+    vida = 4
 
-
-
-    des_obj(){
-
-    }
-
-    anim(nome){
-
-    }
+    speed = 4
+    isLeftPressed = false
+    isRightPressed = false
 
     mov(){
+        this.dir = (this.isLeftPressed ? -1 : 0) + (this.isRightPressed ? 1 : 0);
+        this.x += this.dir * this.speed;
 
+        if(this.x <= 0){
+            this.x = 0
+        }else if(this.x >= 480){
+            this.x = 480
+        }
     }
 }
+
 
 class Disco2 extends Obj{
     des_obj(){
