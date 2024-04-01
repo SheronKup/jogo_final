@@ -99,16 +99,27 @@ class BG extends Obj{
 }
 
 class Texto1{
-    des_text(){
-        
+    des_text(texto,x,y,cor,font){
+        des.font = font
+        des.fillStyle = cor
+        des.fillText(texto,x,y)
+    }
+
+}
+
+class Texto2{
+    des_text(texto, x, y, cor, font) {
+        const textWidth = this.getTextWidth(texto);
+        const centerX = des.canvas.width / 2;
+        const adjustedX = centerX - textWidth / 2;
+
+        des.font = font;
+        des.fillStyle = cor;
+        des.fillText(texto, adjustedX, y);
+    }
+
+    getTextWidth(texto) {
+        const textMetrics = des.measureText(texto);
+        return textMetrics.width;
     }
 }
-class Texto2{
-    des_text(){
-        
-    }
-
-getTextWidth(texto){
-
-}}
-   
