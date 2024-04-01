@@ -10,8 +10,24 @@ function colisao(){
 }
 
 function desenha(){    
+    if(jogar){
+        bg.play()
+        drawBackground()   
+        nav1.des_obj()    
+        tiros.des()
+        discos.des()
+    }else{
+        drawBackground()  
+        nav1.des_obj()    
+        tiros.des()
+        discos.des()
+        gameover.des_text('Game Over', 115, 300, 'aliceblue', '60px Times')
+    }
     
-
+    txt_pts.des_text('Pontos:',215,25,'white','26px Times');
+    pts.des_text(nav1.pts,245,55,'white','26px Times');
+    drawVidas(des)
+    drawFlags(des)
 }
 
 function atualiza(){
