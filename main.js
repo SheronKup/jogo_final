@@ -31,7 +31,25 @@ function desenha(){
 }
 
 function atualiza(){
- 
+    bg1.mov(bg1, 5);
+    bg2.mov(bg2, 5);
+    bg3.mov(bg3, 5);
+    bg4.mov(bg4, 5);
+    bg1_2.mov(bg1_2, 5);
+    bg2_2.mov(bg2_2, 5);
+    bg3_2.mov(bg3_2, 5);
+    bg4_2.mov(bg4_2, 5);
+    bg1_3.mov(bg1_3, 5);
+    bg2_3.mov(bg2_3, 5);
+    bg3_3.mov(bg3_3, 5);
+    bg4_3.mov(bg4_3, 5);
+    discos.destroiDisco();
+    nav1.mov();
+    tiros.atual();
+    discos.atual();
+    checkForStageCompletion();
+    colisao();
+    game_over();
 }
 
 function main(){
