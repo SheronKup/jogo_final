@@ -70,8 +70,11 @@ class Tiro extends Obj{
 }
 
 class BG extends Obj{
-    mov(){
-
+    mov(bg, speed) {
+        bg.y += speed;
+        if (bg.y >= bg.h) {
+          bg.y = -508
+        }
     }
 }
 
