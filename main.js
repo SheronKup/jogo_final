@@ -103,8 +103,24 @@ document.addEventListener('keypress', (ev)=>{
 
 })
 
+function checkForStageCompletion() {
+    if(enemyDefeatedCount != 0){
+        if (totalEnemies === enemyDefeatedCount) {
+        currentStage +=  1 // Move to next stage
+        enemyDefeatedCount = 0; // Reset defeated count
+        }
+    }
+}
+
 function colisao(){
-    
+    grupoDiscos.forEach((disc)=>{
+        if(nav1.colid(disc)){
+            grupoDiscos.splice(grupoDiscos.indexOf(disc), 1)
+            nav1.vida -=1
+            enemyDefeatedCount += 1
+            kill.play()
+        }
+    })
 }
 
 function desenha(){    
