@@ -123,6 +123,53 @@ function colisao(){
     })
 }
 
+function drawBackground() {
+    switch (currentStage) {
+      case 1:
+        bg1.des_obj();
+        bg2.des_obj();
+        bg3.des_obj();
+        bg4.des_obj();
+        break;
+      case 2:
+        bg1_2.des_obj();
+        bg2_2.des_obj();
+        bg3_2.des_obj();
+        bg4_2.des_obj();
+        break;
+      case 3:
+        bg1_3.des_obj();
+        bg2_3.des_obj();
+        bg3_3.des_obj();
+        bg4_3.des_obj();
+      case 4:
+        if(currentStage === 4){
+            currentStage = 1
+        }
+    }
+}
+
+let vidaImages = [vida0, vida1, vida2, vida3]
+
+function drawVidas(canvas) {
+    let xOffset = 2; // Adjust for initial horizontal positioning
+    for (let i = nav1.vida - 1; i >= 0; i--) { // Loop in reverse order
+      let image = vidaImages[i];
+      canvas.drawImage(image, xOffset, 575);
+    }
+}
+
+let flagImages = [flag0, flag1, flag2, flag3]
+
+function drawFlags(canvas) {
+    let xOffset = 446; // Adjust for initial horizontal positioning
+    for (let i = 0; i < currentStage; i++) {
+        let image = flagImages[currentStage - i - 1]; // Access images in reverse order
+        canvas.drawImage(image, xOffset, 575);
+        xOffset += image.width; // Increase offset for next image
+    }
+}
+
 function desenha(){    
     
 
