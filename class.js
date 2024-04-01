@@ -13,7 +13,14 @@ des_obj(){
 }
 
 colid(objeto){
-
+    if((this.x < objeto.x + objeto.w)&&
+    (this.x + this.w > objeto.x)&&
+    (this.y < objeto.y + objeto.h)&&
+    (this.y + this.h > objeto.y)){
+    return true       
+}else{
+    return false
+}
 }
 
 }
