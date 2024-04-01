@@ -43,23 +43,45 @@ class Nave extends Obj{
 }
 
 
-class Disco2 extends Obj{
-    des_obj(){
+class Disco1 extends Obj{
+    points = 20
+    vel = Math.random() * (6 - 1) + 1
 
+    mov(){
+        this.y += this.vel
     }
+    
+}
+
+class Disco2 extends Obj{
+    points = 30
+    vel = Math.random() * (6 - 1) + 1
+
+    mov(){
+        this.y += this.vel
+    }
+    
 }
 
 class Disco3 extends Obj{
-    des_obj(){
-        
+    points = 40
+    vel = Math.random() * (6 - 1) + 1
+
+    mov(){
+        this.y += this.vel
     }
-}
-class Disco4 extends Obj{
-    des_obj(){
-        
-    }
+    
 }
 
+class Disco4 extends Obj{
+    points = 50
+    vel = Math.random() * (6 - 1) + 1
+
+    mov(){
+        this.y += this.vel
+    }
+    
+}
 class Tiro extends Obj{
     des_tiro(){
 
